@@ -2,7 +2,7 @@
   "name": "p3_guirassy_mohamed",
   "version": "1.0.0",
   "description": "mon projet openclassrooms 3 Ohmyfood",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
     "sass": "sass --watch ./sass/main.scss:./css/style.css",
     "test": "echo \"Error: no test specified\" && exit 1"
