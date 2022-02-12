@@ -7,13 +7,11 @@ main{
         background-color: #e9e9e9;
         text-align: center;
         padding: 0.5rem;
-
         i {
             font-size: 1.5rem;
         }
     }   
 }
-
 /* Explorer */
 .explore {
     text-align: center;
@@ -93,13 +91,7 @@ main{
         gap: 2rem;
         padding: 10px;
         padding-top: 2rem;
-        padding-bottom: 2rem;
-        /*version tablette*/
-        @media (max-width:972px){
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-        }
+        padding-bottom: 2rem; 
     }
     li {
         position: relative;
@@ -110,7 +102,7 @@ main{
                 color: white;
                 transform: scale(1.02);
                 opacity: 0.9; 
-        }
+            }
         &::before {
             content: counter(steps);
             counter-increment: steps;
@@ -132,7 +124,7 @@ main{
         flex-grow: 1;
         border-radius: 1rem;
         box-shadow: 2px 1px 8px -3px #000000;
-        &:hover {
+        &:hover{
             transform: scale(1.02);
         }
         ::before {
@@ -149,7 +141,7 @@ main{
     background-color: #f6f6f6;
     padding-bottom: 4rem;
     padding-top: 2rem;
-    overflow: hidden;   
+    overflow: hidden;
     img {
         height: 15rem;
         display: flex;
@@ -173,7 +165,6 @@ main{
             text-align: center;
         }  
     }
-    
     .card_description{
         background-color: white;
         border-radius: 0 0 10px 10px;
@@ -189,7 +180,7 @@ main{
             }
         }
     }
-    .fas {
+    .fas{
         color: transparent;
         background-image: linear-gradient(to top,rgba(147,86,220,0.9),rgba(255,121, 218,0.9));
         background-clip: text;
@@ -210,7 +201,7 @@ main{
             justify-content: center;
             padding: 0 0;
         }
-    }
+    }   
     a.card {
     background-color: white;
     border-radius: 20px;
@@ -232,10 +223,7 @@ main{
         width: 23%;
     }
 }
-    h3{
-        margin-bottom: 0;
-        font-weight: 700;
-    }
+   
 }
     .new {    
         position: relative;
@@ -251,11 +239,58 @@ main{
             align-items: center;
             right: 1rem;
             top: 1rem;
+        h3{
+                margin-bottom: 0;
+                font-weight: 700;
+                text-transform: uppercase;
+            }
         }
     }
+   .enchanted.note{
+    /*version tablette*/
+    @media (min-width:1140px){
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+   h3{
+        text-transform: uppercase;
+        position: relative; 
+        font-weight: 500;
+        &::after{
+        text-transform: uppercase;
+        content: "";
+        position: absolute;
+        height: 0.25rem;
+        width: 2.95rem;
+        top: 1.5rem;
+        left: 0;
+        background-color: #99E2D0;
+        padding: 0;
+        } 
+        }
+    } 
+} 
     .small-card img {
         background-color: white;
         width: 100%;
+    }
+    
+    .resto-main h3{
+        text-transform: uppercase;
+        position: relative; 
+        font-weight: 500;
+        &::after{
+        text-transform: uppercase;
+        content: "";
+        position: absolute;
+        height: 0.25rem;
+        width: 2.95rem;
+        top: 1.5rem;
+        left: 0;
+        background-color: #99E2D0;
+        padding: 0;
+        
+    }
     }
     
     

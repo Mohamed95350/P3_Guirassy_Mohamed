@@ -99,6 +99,7 @@ main{
             display: flex;
             flex-direction: column;
             width: 100%;
+            
         }
     }
     li {
@@ -110,7 +111,7 @@ main{
                 color: white;
                 transform: scale(1.02);
                 opacity: 0.9; 
-        }
+            }
         &::before {
             content: counter(steps);
             counter-increment: steps;
@@ -132,7 +133,7 @@ main{
         flex-grow: 1;
         border-radius: 1rem;
         box-shadow: 2px 1px 8px -3px #000000;
-        &:hover {
+        &:hover{
             transform: scale(1.02);
         }
         ::before {
@@ -140,7 +141,7 @@ main{
             color: lightgrey;
             font-size: 1.3rem;
         }
-    h2{
+     h2 {
         margin-bottom: 2rem;
         }    
     }
@@ -149,7 +150,8 @@ main{
     background-color: #f6f6f6;
     padding-bottom: 4rem;
     padding-top: 2rem;
-    overflow: hidden;   
+    overflow: hidden;
+    
     img {
         height: 15rem;
         display: flex;
@@ -173,7 +175,6 @@ main{
             text-align: center;
         }  
     }
-    
     .card_description{
         background-color: white;
         border-radius: 0 0 10px 10px;
@@ -189,7 +190,7 @@ main{
             }
         }
     }
-    .fas {
+    .fas{
         color: transparent;
         background-image: linear-gradient(to top,rgba(147,86,220,0.9),rgba(255,121, 218,0.9));
         background-clip: text;
