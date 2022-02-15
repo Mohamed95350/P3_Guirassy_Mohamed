@@ -1,4 +1,4 @@
-main{ 
+main{  
     .city{
         display: flex;
         align-items: center;
@@ -39,10 +39,6 @@ main{
         display: flex;
         justify-content: center;
         margin:2rem;
-        }
-    &:hover{
-        transform: scale(1.02);
-        opacity: 0.9; 
     }
 }
 @keyframes disappear {
@@ -52,7 +48,7 @@ main{
 }
 @keyframes spin {
     to {
-        transform: rotate(360deg);
+        transform: rotate(360deg); 
     }
 }
 .menus{

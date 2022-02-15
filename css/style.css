@@ -316,10 +316,6 @@ main .city i {
   justify-content: center;
   margin: 2rem;
 }
-.explore:hover {
-  transform: scale(1.02);
-  opacity: 0.9;
-}
 
 @keyframes disappear {
   to {

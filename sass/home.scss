@@ -238,9 +238,9 @@ h2{
         font-weight: 700;
     }
 }
-.new {    
+.new {     
     position: relative;
-    &:before{
+    &:before{ 
         content:"NOUVEAU";
         position: absolute;
         height: 2rem;
