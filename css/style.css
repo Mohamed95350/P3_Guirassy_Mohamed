@@ -114,10 +114,13 @@ main .city i {
   box-shadow: 2px 1px 8px -3px #000000;
 }
 .functioning li:hover {
-  background-image: linear-gradient(to top, #9356DC, #FF79DA);
-  color: white;
+  background-color: #F7F0FF;
+  color: black;
   transform: scale(1.02);
   opacity: 0.9;
+}
+.functioning li:hover i::before {
+  color: #9356DC;
 }
 .functioning li::before {
   content: counter(steps);
@@ -314,29 +317,6 @@ main .city i {
   opacity: 0.9;
 }
 
-.loader {
-  position: fixed;
-  display: grid;
-  place-items: center;
-  background-color: #ffffff;
-  height: 100vh;
-  inset: 0;
-  z-index: 1;
-  opacity: 0.9;
-  animation: disappear 200ms 2s forwards;
-  transform-origin: top;
-}
-.loader::after {
-  content: "";
-  height: 100px;
-  width: 100px;
-  border-radius: 5px solid transparent;
-  border-top: 5px solid #9356DC;
-  border-radius: 50%;
-  animation: spin 1s ease-in-out;
-  animation-iteration-count: 2;
-}
-
 @keyframes disappear {
   to {
     transform: scale(0);
@@ -347,76 +327,6 @@ main .city i {
     transform: rotate(360deg);
   }
 }
-.functioning {
-  margin-left: 20px;
-  /*version mobile*/
-}
-@media (min-width: 420px) {
-  .functioning h2 {
-    text-align: center;
-  }
-}
-.functioning ol {
-  counter-reset: steps;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  padding: 10px;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  /*version tablette*/
-}
-@media (max-width: 972px) {
-  .functioning ol {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
-}
-.functioning li {
-  position: relative;
-  cursor: pointer;
-  font-weight: bold;
-  list-style-type: none;
-  background-color: #f6f6f6;
-  padding: 1.5rem 2rem;
-  flex-grow: 1;
-  border-radius: 1rem;
-  box-shadow: 2px 1px 8px -3px #000000;
-}
-.functioning li:hover {
-  background-image: linear-gradient(to top, #9356DC, #FF79DA);
-  color: white;
-  transform: scale(1.02);
-  opacity: 0.9;
-}
-.functioning li::before {
-  content: counter(steps);
-  counter-increment: steps;
-  color: white;
-  background-color: #9356DC;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  width: 2rem;
-  height: 2rem;
-  bottom: 1rem;
-  left: -1rem;
-  position: absolute;
-}
-.functioning li:hover {
-  transform: scale(1.02);
-}
-.functioning li ::before {
-  margin-right: 1rem;
-  color: lightgrey;
-  font-size: 1.3rem;
-}
-.functioning li h2 {
-  margin-bottom: 2rem;
-}
-
 .menus {
   background-color: #f6f6f6;
   padding-bottom: 4rem;
@@ -626,29 +536,6 @@ main .city i {
   opacity: 0.9;
 }
 
-.loader {
-  position: fixed;
-  display: grid;
-  place-items: center;
-  background-color: #ffffff;
-  height: 100vh;
-  inset: 0;
-  z-index: 1;
-  opacity: 0.9;
-  animation: disappear 200ms 2s forwards;
-  transform-origin: top;
-}
-.loader::after {
-  content: "";
-  height: 100px;
-  width: 100px;
-  border-radius: 5px solid transparent;
-  border-top: 5px solid #9356DC;
-  border-radius: 50%;
-  animation: spin 1s ease-in-out;
-  animation-iteration-count: 2;
-}
-
 @keyframes disappear {
   to {
     transform: scale(0);
@@ -659,68 +546,6 @@ main .city i {
     transform: rotate(360deg);
   }
 }
-.functioning {
-  margin-left: 20px;
-  /*version mobile*/
-}
-@media (min-width: 420px) {
-  .functioning h2 {
-    text-align: center;
-  }
-}
-.functioning ol {
-  counter-reset: steps;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  padding: 10px;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
-.functioning li {
-  position: relative;
-  cursor: pointer;
-  font-weight: bold;
-  list-style-type: none;
-  background-color: #f6f6f6;
-  padding: 1.5rem 2rem;
-  flex-grow: 1;
-  border-radius: 1rem;
-  box-shadow: 2px 1px 8px -3px #000000;
-}
-.functioning li:hover {
-  background-image: linear-gradient(to top, #9356DC, #FF79DA);
-  color: white;
-  transform: scale(1.02);
-  opacity: 0.9;
-}
-.functioning li::before {
-  content: counter(steps);
-  counter-increment: steps;
-  color: white;
-  background-color: #9356DC;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  width: 2rem;
-  height: 2rem;
-  bottom: 1rem;
-  left: -1rem;
-  position: absolute;
-}
-.functioning li:hover {
-  transform: scale(1.02);
-}
-.functioning li ::before {
-  margin-right: 1rem;
-  color: lightgrey;
-  font-size: 1.3rem;
-}
-.functioning li h2 {
-  margin-bottom: 2rem;
-}
-
 .menus {
   background-color: #f6f6f6;
   padding-bottom: 4rem;
@@ -918,6 +743,7 @@ header ::before {
   .banner img {
     min-height: 70vh;
     object-fit: initial;
+    width: 100%;
   }
 }
 
@@ -984,7 +810,7 @@ main {
   background-color: #99E2D0;
   padding: 0;
 }
-.resto-main :hover .fas {
+.resto-main:hover .fas {
   opacity: 1;
   transform: scale(1.2);
 }
@@ -1164,29 +990,6 @@ main .city i {
   opacity: 0.9;
 }
 
-.loader {
-  position: fixed;
-  display: grid;
-  place-items: center;
-  background-color: #ffffff;
-  height: 100vh;
-  inset: 0;
-  z-index: 1;
-  opacity: 0.9;
-  animation: disappear 200ms 2s forwards;
-  transform-origin: top;
-}
-.loader::after {
-  content: "";
-  height: 100px;
-  width: 100px;
-  border-radius: 5px solid transparent;
-  border-top: 5px solid #9356DC;
-  border-radius: 50%;
-  animation: spin 1s ease-in-out;
-  animation-iteration-count: 2;
-}
-
 @keyframes disappear {
   to {
     transform: scale(0);
@@ -1197,76 +1000,6 @@ main .city i {
     transform: rotate(360deg);
   }
 }
-.functioning {
-  margin-left: 20px;
-  /*version mobile*/
-}
-@media (min-width: 420px) {
-  .functioning h2 {
-    text-align: center;
-  }
-}
-.functioning ol {
-  counter-reset: steps;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  padding: 10px;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  /*version tablette*/
-}
-@media (max-width: 972px) {
-  .functioning ol {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
-}
-.functioning li {
-  position: relative;
-  cursor: pointer;
-  font-weight: bold;
-  list-style-type: none;
-  background-color: #f6f6f6;
-  padding: 1.5rem 2rem;
-  flex-grow: 1;
-  border-radius: 1rem;
-  box-shadow: 2px 1px 8px -3px #000000;
-}
-.functioning li:hover {
-  background-image: linear-gradient(to top, #9356DC, #FF79DA);
-  color: white;
-  transform: scale(1.02);
-  opacity: 0.9;
-}
-.functioning li::before {
-  content: counter(steps);
-  counter-increment: steps;
-  color: white;
-  background-color: #9356DC;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  width: 2rem;
-  height: 2rem;
-  bottom: 1rem;
-  left: -1rem;
-  position: absolute;
-}
-.functioning li:hover {
-  transform: scale(1.02);
-}
-.functioning li ::before {
-  margin-right: 1rem;
-  color: lightgrey;
-  font-size: 1.3rem;
-}
-.functioning li h2 {
-  margin-bottom: 2rem;
-}
-
 .menus {
   background-color: #f6f6f6;
   padding-bottom: 4rem;
