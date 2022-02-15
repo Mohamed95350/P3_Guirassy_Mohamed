@@ -22,7 +22,7 @@ header{
     display: block;
     width: 100%;
     object-fit: cover;
-    object-position: center bottom;
+    height: 600px;
     @media screen and (max-width:700px) {
         min-height: 70vh;
         object-fit: initial;
